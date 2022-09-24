@@ -176,13 +176,14 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
     .seccion-galeria #galeria figure{
         max-width: 95%;
         margin-top: 1vh;
         margin-bottom: 2vh;
         border: 0.2em solid black;
-        
+        background-color: black;
     }
     .seccion-galeria #galeria figcaption{
         text-align: center;
@@ -321,7 +322,7 @@ footer{
         padding: 0.5em;
     }
    
-    /** Comumnas en pc **/
+    /** Columnas en pc **/
     .seccion-principal1 article, .seccion-principal2 article{
         column-count: 3;
         column-gap: 5%;
