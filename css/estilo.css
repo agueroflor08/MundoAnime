@@ -1,0 +1,410 @@
+/*** CSS GENERAL ***/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+header{
+    background-color: white;
+}
+.nav1 ul a{
+    color: white;
+}
+.nav1 a:focus, .nav1 a:hover{
+    color: red;
+}
+
+#seccion-menu{
+    background-color: rgb(206, 139, 14);
+}
+
+nav{
+    background-color: black;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.seccion-principal1 article{
+    background-color: rgb(255, 208, 0);
+}
+.seccion-principal2 article{
+    background-color: orange;
+}
+.seccion-principal2 h3{
+    background-color: yellow;
+}
+form{
+    background-color: yellow;
+}
+footer{
+    background-color: black;
+}
+/*** CSS PARA MÓVIL ***/
+
+@media all and (min-width:320px){
+    #seccion-menu img{
+        width: 10vw;
+    }
+    #seccion-menu #cerrar{
+        display: none; /**Oculta imagen de x**/
+    }
+    #seccion-menu #contenedor-enlaces{
+        height: 0; /**Cambia altura a cero**/
+        overflow: hidden; /**Oculta lo que sobresale**/
+        transition: height 1s ease; /**Efecto de transición**/
+    }
+    #seccion-menu:target #abrir{
+        display: none; /**Oculta la imagen de la hamburguesa**/
+    }
+    #seccion-menu:target #cerrar{
+        display: block; /**Muestra la imagen de x**/
+    }
+    #seccion-menu:target #contenedor-enlaces{
+        height: 39vh;
+        transition: height 1s ease;
+    }
+    #seccion-menu #contenedor-enlaces a{
+        display: block; /**Me pone uno debajo del otro**/
+        width: 100%;
+        margin-bottom: 0.25em;
+        margin-top: 0.25em;
+        text-decoration: none;
+        background-color: rgb(255, 208, 0);
+        color: black;
+        padding: 1em; /**Genera espacio a la vuelta**/
+    }
+  
+   header {
+       height: 10vh;
+    }
+    header h1{
+        font-size: 1.3em;
+    }
+    header figure{
+        height: 10vh;
+    }
+    header figure img{
+        height: 100%;
+    }
+    header figure, header h1{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /** Columnas para celular **/
+    .seccion-principal1, .seccion-principal2{
+        padding: 1%;
+    }
+    .seccion-principal1 article, .seccion-principal2 article{
+        column-count:1;
+        text-align: justify;
+        text-indent: 1em;
+        padding: 4%;
+        border: 0.3em solid black;
+    }
+    .seccion-principal1 article h2, .seccion-principal2 article h2{
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .seccion-principal1 article p, .seccion-principal2 article p{
+        margin-top: 0.5em;
+        font-size: 1.2em;
+    }
+    .seccion-principal2 h2{
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+    }
+    .seccion-principal2 h3{
+        font-size: 1.4em;
+    }
+    .seccion-principal2 article h4{
+        font-style: oblique;
+    }
+    .seccion-principal2 article h4, .seccion-principal2 h5{
+        margin-top: 0.5em;
+        font-size: 1.3em;
+    }
+
+    /** Formulario para celulares **/
+    .seccion-formulario h2{
+        text-align: center;
+        padding: 1em;
+    }
+    .seccion-formulario{
+        background-color: orange;
+    }
+    form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        border: 0.2 solid black;
+    }
+
+    label, input{
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+
+    input {
+        border: 0.1em black solid;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+    }
+
+    .botones input {
+        padding: 1em;
+        border: 0.1em black solid;
+        background-color: orange;
+    }
+   
+    .seccion-formulario #figure-registro{
+        width: 100%;
+    }
+    .seccion-formulario #figure-registro img{
+        width: 100%;
+    }
+
+    /** Galería para celular **/
+    .seccion-galeria #galeria{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .seccion-galeria #galeria figure{
+        max-width: 95%;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        border: 0.2em solid black;
+        
+    }
+    .seccion-galeria #galeria figcaption{
+        text-align: center;
+        color: white;
+        font-style: oblique;
+        margin: 0.5em;
+    }
+    .seccion-galeria #galeria figure img{
+        width: 100%;
+    }
+
+    /** Tabla para celular **/
+    table{
+        border-collapse: collapse;
+        width: 95%;
+        margin: 0 auto;
+    }
+    table caption{
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    table th, table td{
+        border: 0.1em solid black;
+        padding: 0.3em;
+        font-size: 1.2em;
+    }
+    table td{
+        background-color: yellow;
+    }
+    table .tabla-encabezado{
+        display: none; /*oculta fila de títulos*/
+    }
+    table tr{
+        display: flex;
+        flex-direction: column; /*muestra una fila por columna*/
+        margin-bottom: 0.7em; /*separa filas*/
+    }
+    table td:nth-of-type(1):before{
+        content: "Año";
+    }
+    table td:nth-of-type(2):before{
+        content: "Emisión en la mañana";
+    }
+    table td:nth-of-type(3):before{
+        content: "Emisión en la tarde";
+    }
+    table td:nth-of-type(4):before{
+        content: "Emisión en la noche";
+    }
+    table td:nth-of-type(5):before{
+        content: "Total";
+    }
+    table td:before{
+        background-color: orange;
+        padding: 0.3em;
+        margin-right: 0.5em;
+    }
+    .tabla h2, .tabla p{
+        margin: 0.5em;
+    }
+    .tabla h2{
+        font-size: 1.3em;
+    }
+    .tabla p{
+        font-size: 1.2em;
+    }
+
+    /** Pie **/
+    .footer1{
+        font-style: italic;
+    }
+    footer p{
+        color: white;
+        padding: 0.5em;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    footer p a{
+        color: rgb(255, 208, 0);
+        font-style: oblique;
+    }
+}
+
+/*** CSS PARA PC ***/
+
+@media all and (min-width:1024px){
+    
+    header{
+        height: 10vh;
+    }
+    header h1{
+        font-size: 1.5em;
+    }
+    header figure{
+        height: 10vh;
+    }
+    header figure img{
+        height: 100%;
+    }
+
+    #seccion-menu #abrir, #seccion-menu #cerrar{
+        display: none; /**Oculta imágenes de menú desplegable**/
+    }
+  
+    #seccion-menu #contenedor-enlaces{
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #seccion-menu #contenedor-enlaces a{
+        width: 5vw;
+        margin-top: 0.5em;
+    }
+
+    #seccion-menu #contenedor-enlaces a:hover, #seccion-menu #contenedor-enlaces a:focus{
+        background-color: rgb(237, 75, 5);
+        transition: background-color 1s ease;
+        color: white;
+        transition: color 1s ease;
+    }
+    .nav{
+        height: 5vh;
+    }
+   
+    .nav1 ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1em;
+    }
+    .nav1 ul a{
+        padding: 0.5em;
+    }
+   
+    /** Comumnas en pc **/
+    .seccion-principal1 article, .seccion-principal2 article{
+        column-count: 3;
+        column-gap: 5%;
+        column-rule: 0.4em dotted black;
+    }
+    .seccion-principal1 article p, .seccion-principal2 article p{
+        font-size: 1.2em;
+    }
+
+    /** Formulario para pc **/
+
+    form {
+        width: 50%;
+    }
+
+    label, input{
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+
+    input{
+        width: 60%;
+    }
+
+    label {
+        width: 30%;
+        text-align: right;
+        vertical-align: top;
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+
+    .botones input {
+        padding: 1.5em;
+        width: 25%;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+     /** Galeria en pc **/
+    
+     .seccion-galeria #galeria{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         margin:1em;
+     }
+     .seccion-galeria #galeria figure{
+         width: 30%;
+         background-color: black;
+         margin: 1vh;
+     }
+
+     /** Tabla para pc **/
+     table {
+         width: 60%;
+         height: 50vh;
+         margin-bottom: 1em;
+     }
+     table .tabla-encabezado{
+         display: table-row;
+         background-color: orange;
+     }
+     td{
+        text-align: center;
+     }
+     table tr{
+         display: table-row;
+     }
+     table td:before {
+         display: none;
+     }
+     footer p a:hover, footer p a:focus{
+        color: red;
+    }
+    .botones input:focus, .botones input:hover{
+        background-color: rgb(237, 75, 5);
+        color: white;
+        transition: bacground-color 1s ease;
+    }
+}
