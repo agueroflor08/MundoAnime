@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Anime</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+    <nav class="nav1">
+        <ul>
+            <li><a href="../index.html">Salto a contenido</a></li>
+            <li><a href="#menu">Salto a navegación</a></li>
+        </ul>
+    </nav>
+    <header>
+        <figure>
+            <img src="../img/logo anime.jpg" alt="calabera con sombrero amarillo y rojo">
+        </figure>
+        <h1>Mundo Anime</h1>
+    </header>
+    <section id="seccion-menu">
+        <a href="#seccion-menu"><img src="../img/burger_menu.png" id="abrir"></a>
+        <a href="#"><img src="../img/cerrar_menu.png" id="cerrar"></a>
+        <nav id="menu">
+            <ul id="contenedor-enlaces">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tablas.html">Producción</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    <main>
+        <section class="seccion-formulario">
+            <figure id="figure-registro">
+                <img src="../img/registro.jpg" alt="10 personajes animados en recuadros">
+            </figure>
+            <h2>Formulario de registro</h2>
+                <form action="mailto:agueroflord8@gmail.com" method="post">
+                    <label for="NomCom">Nombre completo:</label>
+                <input type="text" id="NomCom" name="nombreCom" placeholder="Ingrese su nombre completo" requiered maxlength="50">
+                <label for="cor">Correo:</label>
+                <input type="email" id="cor" name="correo" placeholder="agueroflord8@gmail.com" required>
+                <label for="contra">Contraseña:</label>
+                <input type="password" id="contra" name="clave" required minlength="8">
+                <label>¿Quiere recibir novedades?</label>
+                <fieldset id="radio">
+                <label for="si">Si
+                    <input type="radio" id="si" name="seleccion" value="si" checked>
+                </label>
+                <label for="no">No
+                    <input type="radio" id="no" name="seleccion" value="no">
+                </label>
+               </fieldset>
+            <section class="botones">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </section>
+            </form>
+            
+        </section>
+    </main>
+    <footer>
+        <p>Para más información visita: <a href="https://elmundoanime.com/" target="_blank">El mundo anime</a></p>
+    </footer>
+</body>
+</html>
+
